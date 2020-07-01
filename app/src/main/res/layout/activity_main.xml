@@ -82,17 +82,6 @@
         android:layout_weight="1" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnOperationChange"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/colorAccent"
-        android:text="Calculo de arriba"
-        android:textAlignment="center"
-        android:textColor="@color/colorWhite"
-        tools:ignore="RtlCompat" />
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnOperationChange2"
         style="@style/BcpButtonOperation" />
 

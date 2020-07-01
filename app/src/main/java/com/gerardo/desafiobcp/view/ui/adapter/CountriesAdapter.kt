@@ -19,7 +19,6 @@ import com.gerardo.desafiobcp.view.ui.utils.inflate
 import kotlinx.android.synthetic.main.item_country.view.*
 
 class CountriesAdapter(private val listener: (MoneyEntity) -> Unit) : RecyclerView.Adapter<CountriesAdapter.ArticleHolder>() {
-
     var data: List<MoneyEntity> = arrayListOf()
 
     override fun onBindViewHolder(holder: ArticleHolder, position: Int) = holder.bind(data[position], listener)

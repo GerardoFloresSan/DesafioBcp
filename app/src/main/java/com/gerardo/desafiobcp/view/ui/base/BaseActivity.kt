@@ -102,8 +102,4 @@ abstract class BaseActivity : AppCompatActivity() {
 
     open fun onCreate() {}
 
-    interface SimpleNavigationItemSelectedListener {
-        fun onNavigationItemSelected(item: MenuItem)
-    }
-
 }
