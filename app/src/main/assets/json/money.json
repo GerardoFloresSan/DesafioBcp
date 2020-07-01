@@ -1,0 +1,69 @@
+{
+  "currencies": [
+    {
+      "MONEY_NAME_COUNTRY": "Peru",
+      "MONEY_NAME": "Soles",
+      "TYPE_CHANGE_SALE": 0.00,
+      "TYPE_CHANGE_BUY": 0.00,
+      "ABBREVIATION_MONEY": "PEN",
+      "URL_FLAG": "https://image.winudf.com/v2/image/Y29tLmZsYWd3YWxscGFwZXIucGVydV9zY3JlZW5fMl8xNTMzNDMzOTg0XzA1MA/screen-2.jpg?fakeurl=1&type=.jpg",
+      "FACTOR_MONEY": ""
+    },
+    {
+      "MONEY_NAME_COUNTRY": "European Union",
+      "MONEY_NAME": "Euros",
+      "TYPE_CHANGE_SALE": 4.10,
+      "TYPE_CHANGE_BUY": 4.20,
+      "ABBREVIATION_MONEY": "EUR",
+      "URL_FLAG": "https://cdn11.bigcommerce.com/s-ey7tq/images/stencil/1280x1280/products/3223/18848/europe-flag__45457.1575328341.jpg?c=2&imbypass=on",
+      "FACTOR_MONEY": "1 SOL = 0.25 EUR"
+    },
+    {
+      "MONEY_NAME_COUNTRY": "United States",
+      "MONEY_NAME": "Dolares",
+      "TYPE_CHANGE_SALE": 3.29,
+      "TYPE_CHANGE_BUY": 3.25,
+      "ABBREVIATION_MONEY": "USD",
+      "URL_FLAG": "https://i.pinimg.com/originals/cc/1c/3b/cc1c3bc22e31ebe3264a867f5810d648.png",
+      "FACTOR_MONEY": "1 SOL = 0.30 USD"
+    },
+    {
+      "MONEY_NAME_COUNTRY": "Japan",
+      "MONEY_NAME": "Yenes",
+      "TYPE_CHANGE_SALE": 5.00,
+      "TYPE_CHANGE_BUY": 5.50,
+      "ABBREVIATION_MONEY": "JPY",
+      "URL_FLAG": "https://i1.pngguru.com/preview/332/150/325/countries-icons-pngs-flag-japan-png-icon.jpg",
+      "FACTOR_MONEY": "1 SOL = 5 JPY"
+    },
+    {
+      "MONEY_NAME_COUNTRY": "United Kingdom",
+      "MONEY_NAME": "Euros",
+      "TYPE_CHANGE_SALE": 4.10,
+      "TYPE_CHANGE_BUY": 4.20,
+      "ABBREVIATION_MONEY": "GBP",
+      "URL_FLAG": "https://i0.pngocean.com/files/177/440/62/clear-view-imaging-ltd-flag-of-the-united-kingdom-flag-of-british-columbia-national-flag-flag.jpg",
+      "FACTOR_MONEY": "1 SOL = 0.23 GBP"
+    },
+
+    {
+      "MONEY_NAME_COUNTRY": "Switzerland",
+      "MONEY_NAME": "Franco Suizo",
+      "TYPE_CHANGE_SALE": 2.29,
+      "TYPE_CHANGE_BUY": 2.50,
+      "ABBREVIATION_MONEY": "CHF",
+      "URL_FLAG": "https://us.123rf.com/450wm/photoroman/photoroman1610/photoroman161001196/64411950-bandera-oficial-nacional-suiza-s%C3%ADmbolo-patri%C3%B3tico-bandera-elemento-fondo-corregir-los-colores-bandera-de-.jpg?ver=6",
+      "FACTOR_MONEY": "1 SOL = 0.30 CHF"
+    },
+    {
+      "MONEY_NAME_COUNTRY": "Canada",
+      "MONEY_NAME": "Dolar Canadiense",
+      "TYPE_CHANGE_SALE": 2.29,
+      "TYPE_CHANGE_BUY": 2.50,
+      "ABBREVIATION_MONEY": "CAD",
+      "URL_FLAG": "https://images-na.ssl-images-amazon.com/images/I/31udX7AlntL._AC_SX450_.jpg",
+      "FACTOR_MONEY": "1 SOL = 0.38 CAD"
+    }
+
+  ]
+}

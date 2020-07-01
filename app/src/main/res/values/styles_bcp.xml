@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BcpImagenPrincipal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/img_height_size</item>
+        <item name="android:src">@drawable/splash_bcp</item>
+    </style>
+
+    <style name="BcpLinearCotizador">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="BcpRelative">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="BcpWrapper">
+        <item name="android:layout_width">@dimen/bcp_wrapper_size</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="BcpLinersInput">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/lnl_marginStart</item>
+        <item name="android:layout_marginBottom">@dimen/lnl_marginBottom</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BcpLinersInput.Out">
+        <item name="android:layout_below">@+id/lnlInput</item>
+    </style>
+
+    <style name="BcpEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">@string/text_hint_input</item>
+        <item name="android:inputType">number</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:text">@string/text_input</item>
+        <item name="android:textSize">@dimen/edit_text_16</item>
+    </style>
+
+    <style name="BcpEditText.Out">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">@string/text_hint_out</item>
+        <item name="android:inputType">number</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:text">@string/text_out</item>
+        <item name="android:textSize">@dimen/edit_text_16</item>
+    </style>
+
+    <style name="BcpButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/blueBcp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/money_name_dolar</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="BcpButton.Soles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/blueBcp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/money_name_soles</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="BcpImgChange">
+        <item name="android:layout_width">@dimen/img_change_layout_width</item>
+        <item name="android:layout_height">@dimen/img_change_layout_height</item>
+        <item name="android:layout_alignParentTop">false</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">false</item>
+        <item name="android:layout_marginStart">@dimen/img_change_marginStar</item>
+        <item name="android:layout_marginTop">@dimen/img_change_marginTop</item>
+        <item name="android:layout_marginEnd">@dimen/img_change_marginEnd</item>
+        <item name="android:layout_marginRight">@dimen/img_change_marginRight</item>
+        <item name="android:layout_toEndOf">@+id/lnlInput</item>
+        <item name="android:src">@drawable/arrows</item>
+    </style>
+
+    <style name="BcpTextInformation">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/text_information_marginTop</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BcpButtonOperation">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:text">@string/text_button_operation</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+</resources>

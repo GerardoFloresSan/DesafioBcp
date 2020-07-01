@@ -2,6 +2,7 @@ package com.gerardo.desafiobcp.view.ui.application
 
 import android.app.Activity
 import android.app.Application
+import com.gerardo.desafiobcp.view.ui.utils.Money
 import io.paperdb.Paper
 import java.util.*
 
@@ -9,6 +10,7 @@ open class BcpDesafioApplication : Application(){
     override fun onCreate() {
         super.onCreate()
         Paper.init(this)
+        Money.init(this)
     }
 
     companion object {

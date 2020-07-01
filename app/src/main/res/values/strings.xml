@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">DesafioBCP</string>
+
+    <!-- STRINGS CAJA DE TEXTO -->
+
+    <string name="text_hint_input">Tu envias:</string>
+    <string name="text_input">0.0</string>
+
+    <string name="text_hint_out">Tu recibes:</string>
+    <string name="text_out">0.0</string>
+
+    <string name="money_name_dolar">Dolares</string>
+    <string name="money_name_soles">Soles</string>
+
+    <string name="tools_description">Compra:valor1 | Venta: valor2</string>
+
+    <string name="text_button_operation">Empieza tu operación</string>
+
 </resources>

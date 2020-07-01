@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    Dimension: ImagenPrincipal -->
+    <dimen name="img_height_size">200dp</dimen>
+
+    <!--    Dimension: ImagenPrincipal -->
+    <dimen name="bcp_wrapper_size">200dp</dimen>
+
+    <!--    Dimension: BcpLinersInput -->
+    <dimen name="lnl_marginStart">20dp</dimen>
+    <dimen name="lnl_marginBottom">20dp</dimen>
+
+    <!--    Dimension: TextSize -->
+    <dimen name="edit_text_16">16sp</dimen>
+
+    <!--    Dimension: Image Change -->
+    <dimen name="img_change_layout_width">46dp</dimen>
+    <dimen name="img_change_layout_height">46dp</dimen>
+    <dimen name="img_change_marginStar">22dp</dimen>
+    <dimen name="img_change_marginTop">28dp</dimen>
+    <dimen name="img_change_marginEnd">22dp</dimen>
+    <dimen name="img_change_marginRight">35dp</dimen>
+
+    <!--    Dimension: Text Information -->
+    <dimen name="text_information_marginTop">30dp</dimen>
+
+
+</resources>
