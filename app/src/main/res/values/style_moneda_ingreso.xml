@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Style De Input-->
+    <style name="StyleText">
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="error_appearance_red" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/orangeBcp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/blueBcp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#2DB4FF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="black">#000</color>
+
+    <!-- Colores de BCP -->
+    <color name="blueBcp">#00286E</color>
+    <color name="orangeBcp">#E35803</color>
+
+
+
+    <!-- Color de Errores -->
+    <color name="red">#CF2D3A</color>
+
+
+</resources>
