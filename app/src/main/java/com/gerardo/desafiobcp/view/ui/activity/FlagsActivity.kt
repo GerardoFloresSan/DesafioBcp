@@ -13,14 +13,13 @@ import com.gerardo.desafiobcp.view.ui.utils.Money
 import kotlinx.android.synthetic.main.activity_flags.*
 
 class FlagsActivity : BaseActivity() {
-
     private lateinit var adapter: CountriesAdapter
     private val currencies = Money.getAllMoney()
 
     override fun getView(): Int = R.layout.activity_flags
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate() {
+        super.onCreate()
         val typeButton = intent.getIntExtra("extra0", 0)
 
         adapter = CountriesAdapter {moneyEntity ->
@@ -34,5 +33,4 @@ class FlagsActivity : BaseActivity() {
         adapter.data = currencies
         recycler.adapter = adapter
     }
-
 }

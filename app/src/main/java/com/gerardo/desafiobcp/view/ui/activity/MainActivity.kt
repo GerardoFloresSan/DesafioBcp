@@ -3,17 +3,17 @@ package com.gerardo.desafiobcp.view.ui.activity
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
+import android.text.Editable
 import android.widget.Toast
 import com.gerardo.desafiobcp.R
 import com.gerardo.desafiobcp.data.entity.MoneyEntity
 import com.gerardo.desafiobcp.view.ui.base.BaseActivity
-import com.gerardo.desafiobcp.view.ui.utils.ChangeMoney
 import com.gerardo.desafiobcp.view.ui.utils.Money
+import com.gerardo.desafiobcp.view.ui.utils.SimpleTextWatcher
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
 
-    lateinit var operation: ChangeMoney
     lateinit var moneyBase : MoneyEntity
     lateinit var moneyBase2 : MoneyEntity
 
@@ -33,23 +33,60 @@ class MainActivity : BaseActivity() {
         btnChangeIconOut.text = moneyBase2.moneyName
         txtCompraYVenta.text = "Compra: ${moneyBase2.typeChangeBuy} | Venta: ${moneyBase2.typeChangeSale}"
 
+        txtMoneyIn.addTextChangedListener(object : SimpleTextWatcher() {
+            override fun afterTextChanged(s: Editable?) {
+                if(!txtMoneyOut.isFocused && txtMoneyIn.isFocusable) {
+                    when {
+                        btnChangeIcon.tag == moneyBase2 && btnChangeIconOut.tag == moneyBase -> {
+                            val newValue = if (txtMoneyIn.text.toString().trim()
+                                    .isNotEmpty()
+                            ) (txtMoneyIn.text.toString().trim()
+                                .toDouble()) * moneyBase2.typeChangeBuy else ""// TIPO_CAMBIO_COMPRA_DOLAR
+                            txtMoneyOut.setText(newValue.toString())
+                        }
+                        btnChangeIcon.tag == moneyBase && btnChangeIconOut.tag == moneyBase2 -> {
+                            val newValue = if (txtMoneyIn.text.toString().trim()
+                                    .isNotEmpty()
+                            ) (txtMoneyIn.text.toString().trim()
+                                .toDouble()) / moneyBase2.typeChangeSale else ""// TIPO_CAMBIO_VENTA_DOLAR
+                            txtMoneyOut.setText(newValue.toString())
+                        }
+                        else -> {
+                            Toast.makeText(this@MainActivity, "Error", Toast.LENGTH_LONG)
+                        }
+                    }
+                }
+
+            }
+        })
+
+        txtMoneyOut.addTextChangedListener(object : SimpleTextWatcher() {
+            override fun afterTextChanged(s: Editable?) {
+                if(!txtMoneyIn.isFocused && txtMoneyOut.isFocused) {
+                    when {
+                        btnChangeIcon.tag == moneyBase2 && btnChangeIconOut.tag == moneyBase -> {
+                            val newValue = if(txtMoneyOut.text.toString().trim().isNotEmpty()) (txtMoneyOut.text.toString().trim().toDouble()) / moneyBase2.typeChangeSale else ""// TIPO_CAMBIO_COMPRA_DOLAR
+                            txtMoneyIn.setText(newValue.toString())
+                        }
+                        btnChangeIcon.tag == moneyBase && btnChangeIconOut.tag == moneyBase2 -> {
+                            val newValue = if(txtMoneyOut.text.toString().trim().isNotEmpty()) (txtMoneyOut.text.toString().trim().toDouble()) * moneyBase2.typeChangeBuy else ""// TIPO_CAMBIO_VENTA_DOLAR
+                            txtMoneyIn.setText(newValue.toString())
+                        }
+                        else -> {
+                            Toast.makeText(this@MainActivity, "Error", Toast.LENGTH_LONG)
+                        }
+                    }
+                }
+            }
+        })
+
         changeMoneyValue()
         setClick()
     }
 
     override fun onResume() {
         super.onResume()
-        /*setUI()*/
-        //validationFlags()
         txtCompraYVenta.text = "Compra: ${moneyBase2.typeChangeBuy} | Venta: ${moneyBase2.typeChangeSale}"
-    }
-    private fun setUI() {
-        btnChangeIcon.text = (btnChangeIcon.tag as MoneyEntity).moneyName
-        btnChangeIconOut.text = (btnChangeIconOut.tag as MoneyEntity).moneyName
-    }
-
-    private fun setupListener() {
-        //validationFlags()
     }
 
     private fun changeMoneyValue() {
@@ -80,7 +117,7 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    fun setClick() {
+    private fun setClick() {
         btnChangeIcon.setOnClickListener {
             if ((it.tag as MoneyEntity) != moneyBase) openCurrencyFlag(0)
         }
@@ -118,34 +155,6 @@ class MainActivity : BaseActivity() {
     }
 
     companion object {
-
-        //Dolar
-        private const val TIPO_CAMBIO_VENTA_DOLAR = 3.29
-        private const val TIPO_CAMBIO_COMPRA_DOLAR = 3.25
-        //Euros
-        private const val TIPO_CAMBIO_VENTA_EURO= 4.10
-        private const val TIPO_CAMBIO_COMPRA_EURO = 4.20
-        //Libras
-        private const val TIPO_CAMBIO_VENTA_LIBRA= 5.00
-        private const val TIPO_CAMBIO_COMPRA_LIBRA = 5.50
-        //Yen
-        private const val TIPO_CAMBIO_VENTA_YEN= 5.00
-        private const val TIPO_CAMBIO_COMPRA_YEN = 5.50
-        //Dolar Canadiense
-        private const val TIPO_CAMBIO_VENTA_DOLAR_CANADIENSE= 2.29
-        private const val TIPO_CAMBIO_COMPRA_DOLAR_CANADIENSE = 2.50
-        //Franco Suizo
-        private const val TIPO_CAMBIO_VENTA_FRANCO_SUIZO= 2.29
-        private const val TIPO_CAMBIO_COMPRA_FRANCO_SUIZO = 2.50
-
-        private const val SOLES = "Soles"
-        private const val DOLARES = "Dolares"
-        private const val EUROS = "Euros"
-        private const val LIBRAS = "Libras"
-        private const val YENES = "Yenes"
-        private const val DOLAR_CANADIENSE = "Dolar Canadiense"
-        private const val FRANCO_SUIZO = "Franco Suizo"
-
         private const val REQUEST_MONEY = 2863
     }
 }
