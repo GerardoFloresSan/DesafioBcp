@@ -23,8 +23,8 @@ class MainActivity : BaseActivity() {
     override fun onCreate() {
         super.onCreate()
         Thread.sleep(2000)
-        moneyBase = Money.getCurrency("PEN")
-        moneyBase2 = Money.getCurrency("USD")
+        moneyBase = Money.getCurrency(PEN)
+        moneyBase2 = Money.getCurrency(USD)
 
         btnChangeIcon.tag = moneyBase
         btnChangeIconOut.tag = moneyBase2
@@ -41,14 +41,14 @@ class MainActivity : BaseActivity() {
                             val newValue = if (txtMoneyIn.text.toString().trim()
                                     .isNotEmpty()
                             ) (txtMoneyIn.text.toString().trim()
-                                .toDouble()) * moneyBase2.typeChangeBuy else ""// TIPO_CAMBIO_COMPRA_DOLAR
+                                .toDouble()) * moneyBase2.typeChangeBuy else ""
                             txtMoneyOut.setText(newValue.toString())
                         }
                         btnChangeIcon.tag == moneyBase && btnChangeIconOut.tag == moneyBase2 -> {
                             val newValue = if (txtMoneyIn.text.toString().trim()
                                     .isNotEmpty()
                             ) (txtMoneyIn.text.toString().trim()
-                                .toDouble()) / moneyBase2.typeChangeSale else ""// TIPO_CAMBIO_VENTA_DOLAR
+                                .toDouble()) / moneyBase2.typeChangeSale else ""
                             txtMoneyOut.setText(newValue.toString())
                         }
                         else -> {
@@ -59,17 +59,16 @@ class MainActivity : BaseActivity() {
 
             }
         })
-
         txtMoneyOut.addTextChangedListener(object : SimpleTextWatcher() {
             override fun afterTextChanged(s: Editable?) {
                 if(!txtMoneyIn.isFocused && txtMoneyOut.isFocused) {
                     when {
                         btnChangeIcon.tag == moneyBase2 && btnChangeIconOut.tag == moneyBase -> {
-                            val newValue = if(txtMoneyOut.text.toString().trim().isNotEmpty()) (txtMoneyOut.text.toString().trim().toDouble()) / moneyBase2.typeChangeSale else ""// TIPO_CAMBIO_COMPRA_DOLAR
+                            val newValue = if(txtMoneyOut.text.toString().trim().isNotEmpty()) (txtMoneyOut.text.toString().trim().toDouble()) / moneyBase2.typeChangeSale else ""
                             txtMoneyIn.setText(newValue.toString())
                         }
                         btnChangeIcon.tag == moneyBase && btnChangeIconOut.tag == moneyBase2 -> {
-                            val newValue = if(txtMoneyOut.text.toString().trim().isNotEmpty()) (txtMoneyOut.text.toString().trim().toDouble()) * moneyBase2.typeChangeBuy else ""// TIPO_CAMBIO_VENTA_DOLAR
+                            val newValue = if(txtMoneyOut.text.toString().trim().isNotEmpty()) (txtMoneyOut.text.toString().trim().toDouble()) * moneyBase2.typeChangeBuy else ""
                             txtMoneyIn.setText(newValue.toString())
                         }
                         else -> {
@@ -155,6 +154,8 @@ class MainActivity : BaseActivity() {
     }
 
     companion object {
+        private const val PEN = "PEN"
+        private const val USD = "USD"
         private const val REQUEST_MONEY = 2863
     }
 }
