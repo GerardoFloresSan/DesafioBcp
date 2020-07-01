@@ -9,8 +9,8 @@ import java.util.*
 open class BcpDesafioApplication : Application(){
     override fun onCreate() {
         super.onCreate()
-        Paper.init(this)
         Money.init(this)
+        Paper.init(this)
     }
 
     companion object {
