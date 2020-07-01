@@ -48,7 +48,7 @@
 
     {
       "MONEY_NAME_COUNTRY": "Switzerland",
-      "MONEY_NAME": "Franco Suizo",
+      "MONEY_NAME": "CHF",
       "TYPE_CHANGE_SALE": 2.29,
       "TYPE_CHANGE_BUY": 2.50,
       "ABBREVIATION_MONEY": "CHF",
@@ -57,7 +57,7 @@
     },
     {
       "MONEY_NAME_COUNTRY": "Canada",
-      "MONEY_NAME": "Dolar Canadiense",
+      "MONEY_NAME": "CAD",
       "TYPE_CHANGE_SALE": 2.29,
       "TYPE_CHANGE_BUY": 2.50,
       "ABBREVIATION_MONEY": "CAD",

@@ -59,9 +59,9 @@
 
     <style name="BcpButton">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:background">@color/blueBcp</item>
+        <item name="android:background">@drawable/shape_button_changes</item>
         <item name="android:gravity">center</item>
         <item name="android:text">@string/money_name_dolar</item>
         <item name="android:textColor">@color/colorWhite</item>
@@ -70,9 +70,9 @@
 
     <style name="BcpButton.Soles">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:background">@color/blueBcp</item>
+        <item name="android:background">@drawable/shape_button_changes</item>
         <item name="android:gravity">center</item>
         <item name="android:text">@string/money_name_soles</item>
         <item name="android:textColor">@color/colorWhite</item>
