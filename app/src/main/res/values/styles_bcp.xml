@@ -41,7 +41,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:hint">@string/text_hint_input</item>
-        <item name="android:inputType">number</item>
+        <item name="android:inputType">numberDecimal</item>
         <item name="android:imeOptions">actionNext</item>
         <item name="android:text">@string/text_input</item>
         <item name="android:textSize">@dimen/edit_text_16</item>
@@ -51,7 +51,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:hint">@string/text_hint_out</item>
-        <item name="android:inputType">number</item>
+        <item name="android:inputType">numberDecimal</item>
         <item name="android:imeOptions">actionNext</item>
         <item name="android:text">@string/text_out</item>
         <item name="android:textSize">@dimen/edit_text_16</item>
