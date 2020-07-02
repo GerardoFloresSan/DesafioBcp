@@ -12,8 +12,8 @@
     {
       "MONEY_NAME_COUNTRY": "European Union",
       "MONEY_NAME": "Euros",
-      "TYPE_CHANGE_SALE": 3.98,
-      "TYPE_CHANGE_BUY": 4.10,
+      "TYPE_CHANGE_SALE": 4.10,
+      "TYPE_CHANGE_BUY": 3.98,
       "ABBREVIATION_MONEY": "EUR",
       "URL_FLAG": "https://cdn11.bigcommerce.com/s-ey7tq/images/stencil/1280x1280/products/3223/18848/europe-flag__45457.1575328341.jpg?c=2&imbypass=on",
       "FACTOR_MONEY": "1 SOL = 0.25 EUR"

@@ -41,11 +41,11 @@ class MainActivity : BaseActivity() {
                 if(!txtMoneyOut.isFocused && txtMoneyIn.isFocusable) {
                     when {
                         btnChangeIcon.tag == moneyBase2 && btnChangeIconOut.tag == moneyBase -> {
-                            val newValue = if (txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) * moneyBase2.typeChangeBuy).toBigDecimal().setScale(3, RoundingMode.UP).toDouble() else ""
+                            val newValue = if (txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) * moneyBase2.typeChangeBuy).toBigDecimal().setScale(2, RoundingMode.UP).toDouble() else ""
                             txtMoneyOut.setText(newValue.toString())
                         }
                         btnChangeIcon.tag == moneyBase && btnChangeIconOut.tag == moneyBase2 -> {
-                            val newValue = if (txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) / moneyBase2.typeChangeSale).toBigDecimal().setScale(3, RoundingMode.UP).toDouble() else ""
+                            val newValue = if (txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) / moneyBase2.typeChangeSale).toBigDecimal().setScale(2, RoundingMode.UP).toDouble() else ""
                             txtMoneyOut.setText(newValue.toString())
                         }
                         else -> {
@@ -61,11 +61,11 @@ class MainActivity : BaseActivity() {
                 if(!txtMoneyIn.isFocused && txtMoneyOut.isFocused) {
                     when {
                         btnChangeIcon.tag == moneyBase2 && btnChangeIconOut.tag == moneyBase -> {
-                            val newValue = if(txtMoneyOut.text.toString().trim().isNotEmpty()) ((txtMoneyOut.text.toString().trim().toDouble()) / moneyBase2.typeChangeBuy).toBigDecimal().setScale(3, RoundingMode.UP).toDouble() else ""
+                            val newValue = if(txtMoneyOut.text.toString().trim().isNotEmpty()) ((txtMoneyOut.text.toString().trim().toDouble()) / moneyBase2.typeChangeBuy).toBigDecimal().setScale(2, RoundingMode.UP).toDouble() else ""
                             txtMoneyIn.setText(newValue.toString())
                         }
                         btnChangeIcon.tag == moneyBase && btnChangeIconOut.tag == moneyBase2 -> {
-                            val newValue = if (txtMoneyOut.text.toString().trim().isNotEmpty()) ((txtMoneyOut.text.toString().trim().toDouble()) * moneyBase2.typeChangeSale).toBigDecimal().setScale(3, RoundingMode.UP).toDouble() else ""
+                            val newValue = if (txtMoneyOut.text.toString().trim().isNotEmpty()) ((txtMoneyOut.text.toString().trim().toDouble()) * moneyBase2.typeChangeSale).toBigDecimal().setScale(2, RoundingMode.UP).toDouble() else ""
                             txtMoneyIn.setText(newValue.toString())
                         }
                         else -> {
@@ -109,11 +109,11 @@ class MainActivity : BaseActivity() {
     private fun changedValues() {
         when {
             btnChangeIcon.tag == moneyBase2 && btnChangeIconOut.tag == moneyBase -> {
-                val newValue = if(txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) * moneyBase2.typeChangeBuy).toBigDecimal().setScale(3, RoundingMode.UP).toDouble() else ""// TIPO_CAMBIO_COMPRA_DOLAR
+                val newValue = if(txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) * moneyBase2.typeChangeBuy).toBigDecimal().setScale(2, RoundingMode.UP).toDouble() else ""// TIPO_CAMBIO_COMPRA_DOLAR
                 txtMoneyOut.setText(newValue.toString())
             }
             btnChangeIcon.tag == moneyBase && btnChangeIconOut.tag == moneyBase2 -> {
-                val newValue = if(txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) / moneyBase2.typeChangeSale).toBigDecimal().setScale(3, RoundingMode.UP).toDouble() else ""// TIPO_CAMBIO_VENTA_DOLAR
+                val newValue = if(txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) / moneyBase2.typeChangeSale).toBigDecimal().setScale(2, RoundingMode.UP).toDouble() else ""// TIPO_CAMBIO_VENTA_DOLAR
                 txtMoneyOut.setText(newValue.toString())
             }
             else -> {
@@ -172,11 +172,11 @@ class MainActivity : BaseActivity() {
 
             when {
                 btnChangeIcon.tag == moneyBase2 && btnChangeIconOut.tag == moneyBase -> {
-                    val newValue = if(txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) * moneyBase2.typeChangeBuy).toBigDecimal().setScale(3, RoundingMode.UP).toDouble() else ""// TIPO_CAMBIO_COMPRA_DOLAR
+                    val newValue = if(txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) * moneyBase2.typeChangeBuy).toBigDecimal().setScale(2, RoundingMode.UP).toDouble() else ""// TIPO_CAMBIO_COMPRA_DOLAR
                     txtMoneyOut.setText(newValue.toString())
                 }
                 btnChangeIcon.tag == moneyBase && btnChangeIconOut.tag == moneyBase2 -> {
-                    val newValue = if(txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) / moneyBase2.typeChangeSale).toBigDecimal().setScale(3, RoundingMode.UP).toDouble() else ""// TIPO_CAMBIO_VENTA_DOLAR
+                    val newValue = if(txtMoneyIn.text.toString().trim().isNotEmpty()) ((txtMoneyIn.text.toString().trim().toDouble()) / moneyBase2.typeChangeSale).toBigDecimal().setScale(2, RoundingMode.UP).toDouble() else ""// TIPO_CAMBIO_VENTA_DOLAR
                     txtMoneyOut.setText(newValue.toString())
                 }
                 else -> {
