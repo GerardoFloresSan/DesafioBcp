@@ -11,6 +11,8 @@ import com.gerardo.desafiobcp.view.ui.base.BaseActivity
 import com.gerardo.desafiobcp.view.ui.utils.Money
 import com.gerardo.desafiobcp.view.ui.utils.SimpleTextWatcher
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.File
+import java.util.*
 
 class MainActivity : BaseActivity() {
 
@@ -81,6 +83,15 @@ class MainActivity : BaseActivity() {
 
         changeMoneyValue()
         setClick()
+        btnOperationChange2.setOnClickListener {
+            if (txtMoneyIn.text.toString().trim().isNotEmpty() && txtMoneyIn.text.toString().trim().isNotEmpty()) {
+                saveDataInText()
+                Toast.makeText(this, "Se guardaron los datos correctamente", Toast.LENGTH_LONG).show()
+            }
+            else {
+                Toast.makeText(this, "Campos requeridos", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
     override fun onResume() {
@@ -111,7 +122,7 @@ class MainActivity : BaseActivity() {
                 txtMoneyOut.setText(newValue.toString())
             }
             else -> {
-                Toast.makeText(this, "Error", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Error", Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -132,6 +143,20 @@ class MainActivity : BaseActivity() {
         }, REQUEST_MONEY)
     }
 
+    private fun saveDataInText() {
+        val path = this.getExternalFilesDir(null)
+        val letDirectory = File(path, "LET")
+        letDirectory.mkdirs()
+        val file = File(letDirectory, "bcp.txt")
+        val date = Date()
+
+        file.appendText(
+            "\nbcp${date.time} - ${(btnChangeIcon.tag as MoneyEntity).abbreviationMoney} - ${txtMoneyIn.text.toString()
+                .trim()} - txtMoneyOut:${(btnChangeIconOut.tag as MoneyEntity).abbreviationMoney} - ${txtMoneyOut.text.toString()
+                .trim()}"
+        )
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (Activity.RESULT_OK == resultCode && REQUEST_MONEY == requestCode) {
             val typeButton = data?.getSerializableExtra("extra0") as Int
@@ -148,6 +173,20 @@ class MainActivity : BaseActivity() {
                 btnChangeIconOut.tag = moneyBase2
                 btnChangeIcon.text = moneyBase.moneyName
                 btnChangeIconOut.text = moneyBase2.moneyName
+            }
+
+            when {
+                btnChangeIcon.tag == moneyBase2 && btnChangeIconOut.tag == moneyBase -> {
+                    val newValue = if(txtMoneyIn.text.toString().trim().isNotEmpty()) (txtMoneyIn.text.toString().trim().toDouble()) * moneyBase2.typeChangeBuy else ""// TIPO_CAMBIO_COMPRA_DOLAR
+                    txtMoneyOut.setText(newValue.toString())
+                }
+                btnChangeIcon.tag == moneyBase && btnChangeIconOut.tag == moneyBase2 -> {
+                    val newValue = if(txtMoneyIn.text.toString().trim().isNotEmpty()) (txtMoneyIn.text.toString().trim().toDouble()) / moneyBase2.typeChangeSale else ""// TIPO_CAMBIO_VENTA_DOLAR
+                    txtMoneyOut.setText(newValue.toString())
+                }
+                else -> {
+                    Toast.makeText(this, "Error", Toast.LENGTH_LONG).show()
+                }
             }
         }
         super.onActivityResult(requestCode, resultCode, data)
